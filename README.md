@@ -2,10 +2,21 @@
 - How to debug
   - Learn the installing
     - Use setuptools
-  - The answer import local one rather than the one installed
-    - Change the import setting to let it import local one
-      - sys.path.append('/mnt/arbiter')
-      - from arbiter.master_chief import *
-  - Now we can change the code and debugging!
+  - Answer
+    - build + install again
+    - Less painful with a script
 
-# 
+
+# Issue: Add wrong targets during arbiter.master_chief.sa_recon
+
+- Todo: case-> /bin/sh
+  - python3 ./run_arbiter.py -f ./CWE131.py -t /bin/ls -l ./n132_log -j ./n132_json
+  - 
+
+# Issue: why the apply_constraint returns nothing [False Positive Issue]
+- Constrain is applied to the state
+- It's false postive 
+
+# Issue: Why apply constrain to all init_val rather than related val
+
+
