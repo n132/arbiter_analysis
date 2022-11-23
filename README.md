@@ -20,3 +20,9 @@
 # Issue: Why apply constrain to all init_val rather than related val
 
 
+# Issue: Track right case
+- checkpoit comes from souce: if there is no source for the vul, it should be {}
+  - If it's {}, sa_advanced:analyze_one would set "target.source = target.addr"
+  - in symbolic execution, call chain would be run_all->run_one->_execute_one-> _create_entry_state+_explore_one
+- The issue's origin is in sa_advanced. There is a KeyError.
+- 
